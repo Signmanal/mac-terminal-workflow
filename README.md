@@ -404,31 +404,118 @@ eval "$(zoxide init zsh)"
 
 ## 常用命令
 
-### 重新加载 Zsh 配置
+下面这部分更偏日常高频使用，基本就是这套工作流里最常敲、最常用到的内容。
+
+### 重新加载或重进 Zsh
 
 ```bash
 source ~/.zshrc
+exec zsh
 ```
+
+- `source ~/.zshrc`：重新加载当前 shell 配置
+- `exec zsh`：直接重开一个新的 zsh 进程，适合改完配置后快速验证
 
 ### 启动 Yazi
 
 ```bash
 y
+y ~/Downloads
+y ~/.config
 ```
+
+- `y`：打开当前目录
+- `y ~/Downloads`：直接打开指定目录
+- `y ~/.config`：快速进入配置目录
 
 ### 使用 Zoxide 跳转目录
 
 ```bash
-z work
+z project
+z downloads
 z foo bar
-zi project
+zi
 ```
 
-### 查看 Ghostty 可用主题
+- `z project`：按历史频率跳转到最匹配的目录
+- `z foo bar`：多关键词模糊跳转
+- `zi`：交互式选择目录，目录多的时候很好用
+
+### 快速编辑配置文件
+
+```bash
+code ~/.zshrc
+code ~/.config/ghostty/config
+code ~/.config/yazi/yazi.toml
+code ~/.config/yazi/keymap.toml
+code ~/.config/yazi/theme.toml
+```
+
+如果你不用 VS Code，也可以换成：
+
+```bash
+open -e ~/.zshrc
+```
+
+### 常用 Homebrew 命令
+
+```bash
+brew install ghostty zoxide yazi ffmpegthumbnailer poppler
+brew upgrade ghostty zoxide yazi
+brew list | grep -E "ghostty|zoxide|yazi"
+```
+
+- 第一条：首次安装
+- 第二条：后续升级常用工具
+- 第三条：确认是否已经安装
+
+### Ghostty 相关命令
 
 ```bash
 ghostty +list-themes
+open -a Ghostty
 ```
+
+- `ghostty +list-themes`：查看本机可用主题
+- `open -a Ghostty`：从命令行直接启动 Ghostty
+
+### 常用目录操作
+
+```bash
+open ~/.config
+open ~/Downloads
+open ~/Desktop
+pwd
+```
+
+- `open`：直接用 Finder 打开目录
+- `pwd`：查看当前所在路径，排查目录跳错时很有用
+
+### Yazi 内部高频按键
+
+这些不是 shell 命令，但实际使用频率很高：
+
+- `gh`：跳回家目录
+- `gc`：跳到 `~/.config`
+- `gd`：跳到 `~/Downloads`
+- `gD`：跳到 `~/Desktop`
+- `gt`：跳到 `/tmp`
+- `gw`：跳到 `~/work`（如果你没有这个目录，记得改成自己的路径）
+- `Space`：选中文件
+- `Enter`：打开文件或进入目录
+- `-`：返回上一级目录
+- `~`：回到家目录
+- `q`：退出 Yazi
+
+### 一个比较顺手的日常组合
+
+```bash
+z project
+y
+```
+
+先用 `z` 快速跳到项目目录，再用 `y` 打开当前目录，一般就是这套配置里最顺手的一组组合。
+
 
 ---
 

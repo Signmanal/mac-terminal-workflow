@@ -1,0 +1,95 @@
+# Yazi 主题配置 - Kanagawa Wave
+
+[manager]
+# 文件列表颜色
+cwd = { fg = "#DCD7BA" }
+hovered = { fg = "#C8C093", bg = "#2D4F67" }
+preview_hovered = { underline = true }
+
+# 文件类型颜色
+find_keyword = { fg = "#E6C384", italic = true }
+find_position = { fg = "#957FB8", bg = "reset", italic = true }
+
+marker_selected = { fg = "#7E9CD8", bg = "#7E9CD8" }
+marker_copied = { fg = "#98BB6C", bg = "#98BB6C" }
+marker_cut = { fg = "#E82424", bg = "#E82424" }
+
+# 边框
+tab_active = { fg = "#DCD7BA", bg = "#1F1F28" }
+tab_inactive = { fg = "#727169", bg = "#1F1F28" }
+tab_width = 1
+
+border_symbol = "│"
+border_style = { fg = "#54546D" }
+
+[status]
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#54546D", bg = "#1F1F28" }
+
+# 模式指示器
+mode_normal = { fg = "#1F1F28", bg = "#7E9CD8", bold = true }
+mode_select = { fg = "#1F1F28", bg = "#E6C384", bold = true }
+mode_unset = { fg = "#1F1F28", bg = "#E82424", bold = true }
+
+# 进度条
+progress_label = { fg = "#DCD7BA", bold = true }
+progress_normal = { fg = "#7E9CD8", bg = "#223249" }
+progress_error = { fg = "#E82424", bg = "#223249" }
+
+[input]
+border = { fg = "#7E9CD8" }
+title = { fg = "#DCD7BA" }
+value = { fg = "#DCD7BA" }
+selected = { reversed = true }
+
+[select]
+border = { fg = "#7E9CD8" }
+active = { fg = "#E6C384" }
+inactive = { fg = "#727169" }
+
+[tasks]
+border = { fg = "#7E9CD8" }
+title = { fg = "#DCD7BA" }
+hovered = { underline = true }
+
+[which]
+cols = 3
+mask = { bg = "#16161D" }
+cand = { fg = "#DCD7BA" }
+rest = { fg = "#727169" }
+desc = { fg = "#957FB8" }
+separator = "  "
+separator_style = { fg = "#54546D" }
+
+[help]
+on = { fg = "#E6C384" }
+run = { fg = "#957FB8" }
+desc = { fg = "#727169" }
+hovered = { bg = "#2D4F67", bold = true }
+footer = { fg = "#1F1F28", bg = "#DCD7BA" }
+
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#957FB8" },
+  { mime = "video/*", fg = "#E6C384" },
+  { mime = "audio/*", fg = "#E6C384" },
+  { mime = "application/zip", fg = "#E82424" },
+  { mime = "application/gzip", fg = "#E82424" },
+  { mime = "application/x-tar", fg = "#E82424" },
+  { mime = "application/x-bzip", fg = "#E82424" },
+  { mime = "application/x-7z-compressed", fg = "#E82424" },
+  { mime = "application/x-rar", fg = "#E82424" },
+]
+
+[icons]
+"Desktop/"     = ""
+"Documents/"   = ""
+"Downloads/"   = ""
+"Pictures/"    = ""
+"Music/"       = ""
+"Movies/"      = ""
+"Videos/"      = ""
+"Public/"      = ""
+"Library/"     = ""
+"Applications/"= ""

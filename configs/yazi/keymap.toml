@@ -1,0 +1,30 @@
+# Yazi 快捷键配置
+
+[manager]
+# 基础导航
+keymap = [
+  { on = [ "k" ], run = "arrow -1", desc = "Move cursor up" },
+  { on = [ "j" ], run = "arrow 1", desc = "Move cursor down" },
+  { on = [ "h" ], run = "leave", desc = "Go back to parent directory" },
+  { on = [ "l" ], run = "enter", desc = "Enter directory" },
+
+  # 快速跳转
+  { on = [ "g", "g" ], run = "arrow -99999999", desc = "Move to top" },
+  { on = [ "G" ], run = "arrow 99999999", desc = "Move to bottom" },
+
+  # 文件操作
+  { on = [ "<Space>" ], run = "select --state=none", desc = "Toggle selection" },
+  { on = [ "y" ], run = "yank", desc = "Copy selected files" },
+  { on = [ "x" ], run = "yank --cut", desc = "Cut selected files" },
+  { on = [ "p" ], run = "paste", desc = "Paste files" },
+  { on = [ "d" ], run = "remove", desc = "Delete files" },
+  { on = [ "r" ], run = "rename", desc = "Rename file" },
+
+  # 搜索和过滤
+  { on = [ "/" ], run = "find", desc = "Find files" },
+  { on = [ "f" ], run = "filter", desc = "Filter files" },
+
+  # 其他
+  { on = [ "q" ], run = "quit", desc = "Quit yazi" },
+  { on = [ "?" ], run = "help", desc = "Show help" },
+]
